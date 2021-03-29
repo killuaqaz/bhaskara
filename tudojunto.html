@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background: antiquewhite;
+        font: normal 15pt arial;
+        text-align: center;
+    }
+
+   
+    footer{
+    color: black;
+    text-align: center;
+    font-style: italic;
+    
+    }
+</style>
+
+</head>
+<body>
+
+    <div><p>valor de a</p></div>
+    <input type="number" name="txtn1" id="valorA"> 
+    <div><p>valor de b</p></div>
+    <input type="number" name="txtn2" id="valorB">
+    <div><p>valor de c</p></div>
+    <input type="number" name="txtn3" id="valorC"><br>
+    <input type="button" value="calcular" onclick="calcular()"><br>
+    <div id = 'res'>resultado</div> <br>
+    <div id = 'res2'> </div>
+</body>
+<script>
+function calcular() {
+
+var a = window.document.getElementById("valorA")
+var b = window.document.getElementById("valorB")
+var c = window.document.getElementById("valorC")
+
+var A = Number(a.value)
+var B = Number(b.value)
+var C = Number(c.value)
+
+var delta = (B)**2 -4 * (A) * (C)
+if (delta >= 0 ){
+
+
+var cal1 = -(B) + Math.sqrt(delta) 
+var final1 = cal1 / (2 * (A))
+
+
+var cal2 = -(B) - Math.sqrt(delta) 
+var final2 = cal2 /( 2 * (A))
+
+var res = window.document.getElementById('res')
+var res2 = window.document.getElementById('res2')
+res.innerHTML = final2 
+res2.innerHTML = final1
+}else{
+    res.innerHTML= ("valor não encontrado")
+    res2.innerHTML=(" .")
+}
+
+}
+
+
+</script>
+<footer>
+    <p>&copy; killua_wes</p>
+
+</footer>
+
+
+   
+
+</body>
+</html>
